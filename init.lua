@@ -613,6 +613,26 @@ require('lazy').setup({
 
         stylua = {}, -- Used to format Lua code
 
+        -- rust lsp and format
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              cargo = {
+                allFeatures = true,
+                buildScripts = true,
+              },
+
+              checkOnSave = {
+                command = 'clippy',
+              },
+
+              procMacro = {
+                enable = true,
+              },
+            },
+          },
+        },
+
         -- Special Lua Config, as recommended by neovim help docs
         lua_ls = {
           on_init = function(client)
