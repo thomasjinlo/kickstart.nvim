@@ -613,6 +613,20 @@ require('lazy').setup({
 
         stylua = {}, -- Used to format Lua code
 
+        -- go lsp and format
+        gopls = {
+          settings = {
+            gopls = {
+              gofumpt = true,
+              staticcheck = true,
+              analyses = {
+                unusedparams = true,
+                shadow = true,
+              },
+            },
+          },
+        },
+
         -- rust lsp and format
         rust_analyzer = {
           settings = {
