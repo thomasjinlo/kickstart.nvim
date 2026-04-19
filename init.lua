@@ -636,7 +636,8 @@ require('lazy').setup({
                 buildScripts = true,
               },
 
-              checkOnSave = {
+              checkOnSave = true,
+              check = {
                 command = 'clippy',
               },
 
