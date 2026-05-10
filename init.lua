@@ -872,7 +872,7 @@ require('lazy').setup({
   },
   {
     'rose-pine/neovim',
-    priority = 999,
+    priority = 997,
     name = 'rose-pine',
     config = function()
       require('rose-pine').setup {
