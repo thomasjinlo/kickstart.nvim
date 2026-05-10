@@ -841,6 +841,36 @@ require('lazy').setup({
     },
   },
   {
+    'catppuccin/nvim',
+    priority = 998,
+    name = 'catppuccin',
+    config = function()
+      require('catppuccin').setup {
+        flavour = 'auto', -- latte, frappe, macchiato, mocha
+        background = {
+          light = 'latte',
+          dark = 'mocha',
+        },
+        transparent_background = false,
+        styles = {
+          comments = { 'italic' },
+          conditionals = { 'italic' },
+          keywords = { 'bold' },
+          functions = { 'bold' },
+        },
+        integrations = {
+          treesitter = true,
+          native_lsp = {
+            enabled = true,
+          },
+          gitsigns = true,
+          telescope = { enabled = true },
+        },
+      }
+      vim.cmd 'colorscheme catppuccin'
+    end,
+  },
+  {
     'rose-pine/neovim',
     priority = 999,
     name = 'rose-pine',
