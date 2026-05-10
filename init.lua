@@ -834,6 +834,13 @@ require('lazy').setup({
   },
 
   {
+    'f-person/auto-dark-mode.nvim',
+    opts = {
+      update_interval = 3000, -- check every 3 seconds
+      fallback = 'light',
+    },
+  },
+  {
     'rose-pine/neovim',
     priority = 999,
     name = 'rose-pine',
